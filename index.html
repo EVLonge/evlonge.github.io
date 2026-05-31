@@ -151,7 +151,7 @@
   .hero-inner {
     position: relative;
     z-index: 2;
-    max-width: 1100px;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     display: grid;
@@ -318,7 +318,7 @@
   }
 
   .section-inner {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 6rem 3rem;
   }
@@ -557,21 +557,20 @@
   /* ── PORTFOLIO PROJECTS ──────────────────────── */
   .portfolio-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2px;
-    background: var(--border);
-    border: 1px solid var(--border);
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 
   .proj-card {
     background: var(--black);
-    padding: 2.25rem 2rem;
+    padding: 2.25rem 0;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
     transition: background 0.25s;
     position: relative;
     overflow: hidden;
+    border-bottom: 1px solid var(--border);
   }
 
   .proj-card::after {
@@ -585,10 +584,7 @@
     transition: transform 0.35s ease;
   }
 
-  .proj-card:hover { background: var(--navy); }
   .proj-card:hover::after { transform: scaleX(1); }
-
-  .proj-card:last-child { grid-column: 1 / -1; }
 
   .proj-meta-row {
     display: flex;
@@ -618,7 +614,7 @@
 
   .proj-title {
     font-family: 'Playfair Display', serif;
-    font-size: 1.05rem;
+    font-size: 1.3rem;
     font-weight: 600;
     color: var(--white);
     line-height: 1.35;
@@ -626,7 +622,7 @@
   }
 
   .proj-brief {
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     font-weight: 300;
     color: var(--cream-dim);
     line-height: 1.7;
@@ -635,7 +631,7 @@
   .proj-visual {
     border: 1px solid var(--border);
     overflow: hidden;
-    background: var(--navy);
+    background: var(--black);
     border-radius: 3px;
   }
 
@@ -657,7 +653,7 @@
   }
 
   .proj-outcome p {
-    font-size: 0.84rem;
+    font-size: 0.9rem;
     font-weight: 300;
     color: var(--cream-dim);
     line-height: 1.7;
@@ -679,13 +675,8 @@
     color: var(--bluegray-light);
   }
 
-  @media (max-width: 700px) {
-    .portfolio-grid { grid-template-columns: 1fr; }
-    .proj-card:last-child { grid-column: 1; }
-  }
-
   /* ── TOOLS ───────────────────────────────────── */
-  #tools { background: var(--navy); }
+  #tools { background: var(--black); }
 
   .tools-grid {
     display: flex;
@@ -781,7 +772,7 @@
 
   /* ── CONTACT ─────────────────────────────────── */
   #contact {
-    background: var(--navy);
+    background: var(--black);
     position: relative;
     overflow: hidden;
   }
@@ -1034,6 +1025,7 @@
     .exp-item { grid-template-columns: 1fr; gap: 0.75rem; }
     .exp-meta { padding-left: 1.5rem; }
     footer { flex-direction: column; align-items: flex-start; }
+    .proj-card { padding: 1.5rem 0; }
   }
 </style>
 </head>
@@ -1641,7 +1633,7 @@
             <span class="proj-tag">Hospitality · Customer Ops</span>
             <span class="proj-year">2020</span>
           </div>
-          <h3 class="proj-title">Guest Experience & Billing System — A Local Hotel</h3>
+          <h3 class="proj-title">Guest Experience & Billing System — Local Boutique Hotel</h3>
           <p class="proj-brief">Manual check-in logs, handwritten billing, and no complaint tracking meant errors slipped through daily. I rebuilt the front-desk operation from scratch — digital, consistent, and measurable.</p>
         </div>
         <div class="proj-visual">
@@ -1726,6 +1718,10 @@
           <span>Google Sheets</span><span>Typeform</span><span>SOP Writing</span>
         </div>
       </div>
+
+    </div>
+  </div>
+</section>
 
 <div class="h-divider"></div>
 
@@ -1905,7 +1901,6 @@
 
     try {
       const data = new FormData(form);
-      // Replace YOUR_FORM_ID below with the ID from your Formspree dashboard
       const res = await fetch('https://formspree.io/f/xjgzddvn', {
         method: 'POST',
         body: data,

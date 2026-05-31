@@ -742,6 +742,110 @@
 
   .form-textarea { height: 130px; }
 
+  /* ── ADDITIONAL OFFERINGS (AI) ───────────────── */
+  #ai-services {
+    background: var(--black);
+  }
+
+  .ai-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1px;
+    background: var(--border-warm);
+    border: 1px solid var(--border-warm);
+  }
+
+  .ai-card {
+    background: var(--black);
+    padding: 2.25rem 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.25s;
+  }
+
+  .ai-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(to right, var(--orange), var(--burgundy-bright));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  .ai-card:hover { background: var(--navy); }
+  .ai-card:hover::before { transform: scaleX(1); }
+
+  .ai-card-badge {
+    display: inline-block;
+    font-size: 0.6rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--orange);
+    border: 1px solid rgba(212,98,42,0.35);
+    padding: 0.2rem 0.55rem;
+    margin-bottom: 1rem;
+  }
+
+  .ai-card-number {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.75rem;
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: rgba(212,98,42,0.07);
+    line-height: 1;
+  }
+
+  .ai-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .ai-card-body {
+    font-size: 0.88rem;
+    font-weight: 300;
+    color: var(--bluegray-light);
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+
+  .ai-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .ai-card-tag {
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 0.25rem 0.6rem;
+    border: 1px solid rgba(212,98,42,0.25);
+    color: var(--orange-light);
+  }
+
+  .ai-section-note {
+    margin-top: 2.5rem;
+    padding: 1.25rem 1.75rem;
+    border-left: 2px solid var(--orange);
+    background: rgba(212,98,42,0.05);
+    font-size: 0.88rem;
+    color: var(--cream-dim);
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  .ai-section-note strong { color: var(--orange-light); font-weight: 500; }
+
   /* ── FOOTER ──────────────────────────────────── */
   footer {
     background: var(--black);
@@ -810,6 +914,7 @@
   <a class="nav-logo" href="#"><span>EVL</span></a>
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
+    <li><a href="#ai-services">AI Services</a></li>
     <li><a href="#experience">Track record</a></li>
     <li><a href="#tools">Tools</a></li>
     <li><a href="#about">About</a></li>
@@ -970,6 +1075,101 @@
 
 <div class="h-divider"></div>
 
+<!-- ADDITIONAL OFFERINGS / AI SERVICES -->
+<section id="ai-services">
+  <div class="section-inner">
+    <div class="section-label">Additional offerings</div>
+    <h2 class="section-title">AI-powered services for the <em>modern business</em></h2>
+    <p class="section-intro">The businesses pulling ahead right now aren't just working harder — they're using AI smarter. These services help you do exactly that, without needing a technical background to make it happen.</p>
+
+    <div class="ai-services-grid">
+
+      <div class="ai-card fade-in">
+        <span class="ai-card-number">01</span>
+        <span class="ai-card-badge">High Demand</span>
+        <div class="ai-card-title">Prompt Engineering & AI Optimization</div>
+        <p class="ai-card-body">Most people use AI tools at 20% of their potential. I craft, test, and refine the exact prompts your team needs — for drafting, customer replies, reports, proposals — so you get consistently high-quality output without the guesswork or endless back-and-forth.</p>
+        <div class="ai-card-tags">
+          <span class="ai-card-tag">ChatGPT</span>
+          <span class="ai-card-tag">Claude</span>
+          <span class="ai-card-tag">Gemini</span>
+          <span class="ai-card-tag">Custom GPTs</span>
+        </div>
+      </div>
+
+      <div class="ai-card fade-in">
+        <span class="ai-card-number">02</span>
+        <span class="ai-card-badge">Fastest Growing</span>
+        <div class="ai-card-title">AI Workflow Integration</div>
+        <p class="ai-card-body">I identify the repetitive tasks eating your team's time and connect AI tools into your existing systems — no code, no technical overhead. Think: automated report drafts, smart email triage, AI-assisted data summaries, and more — all live within the tools you already use.</p>
+        <div class="ai-card-tags">
+          <span class="ai-card-tag">Notion AI</span>
+          <span class="ai-card-tag">Make (Integromat)</span>
+          <span class="ai-card-tag">Zapier AI</span>
+          <span class="ai-card-tag">Google Workspace</span>
+        </div>
+      </div>
+
+      <div class="ai-card fade-in">
+        <span class="ai-card-number">03</span>
+        <span class="ai-card-badge">In Demand</span>
+        <div class="ai-card-title">AI-Assisted Content & Copywriting</div>
+        <p class="ai-card-body">Newsletters, LinkedIn posts, proposals, client reports, SOPs — produced faster and in your voice. I use AI strategically to draft, then apply human editorial judgment to polish. You get consistent, professional content without the blank-page paralysis or the cost of a full content team.</p>
+        <div class="ai-card-tags">
+          <span class="ai-card-tag">Business Writing</span>
+          <span class="ai-card-tag">Email Copy</span>
+          <span class="ai-card-tag">SOPs</span>
+          <span class="ai-card-tag">LinkedIn</span>
+        </div>
+      </div>
+
+      <div class="ai-card fade-in">
+        <span class="ai-card-number">04</span>
+        <span class="ai-card-badge">High Value</span>
+        <div class="ai-card-title">AI-Powered Research & Summarisation</div>
+        <p class="ai-card-body">Need a detailed briefing on a market, competitor, regulation, or topic — fast? I use AI research tools combined with real analytical judgment to produce structured summaries and decision-ready reports that would take a team days to compile manually.</p>
+        <div class="ai-card-tags">
+          <span class="ai-card-tag">Market Intelligence</span>
+          <span class="ai-card-tag">Competitor Analysis</span>
+          <span class="ai-card-tag">Policy Briefs</span>
+        </div>
+      </div>
+
+      <div class="ai-card fade-in">
+        <span class="ai-card-number">05</span>
+        <span class="ai-card-badge">Trending</span>
+        <div class="ai-card-title">AI Chatbot Setup for Customer Service</div>
+        <p class="ai-card-body">I configure and deploy no-code AI chatbots for your website, WhatsApp, or inbox — trained on your FAQs, services, and tone. Enquiries get answered instantly, 24/7, and only the complex ones reach you. Setup is done-for-you, with handoff docs your team can maintain independently.</p>
+        <div class="ai-card-tags">
+          <span class="ai-card-tag">WhatsApp AI</span>
+          <span class="ai-card-tag">Tidio</span>
+          <span class="ai-card-tag">Voiceflow</span>
+          <span class="ai-card-tag">FAQ Automation</span>
+        </div>
+      </div>
+
+      <div class="ai-card fade-in">
+        <span class="ai-card-number">06</span>
+        <span class="ai-card-badge">Strategic</span>
+        <div class="ai-card-title">AI Audit & Readiness Consulting</div>
+        <p class="ai-card-body">Not sure where to start with AI? I assess your current operations, identify the highest-leverage areas for AI adoption, and produce a prioritised roadmap — specific to your business, your team size, and your budget. No jargon, no vendor bias. Just a clear picture of what to do first.</p>
+        <div class="ai-card-tags">
+          <span class="ai-card-tag">Process Mapping</span>
+          <span class="ai-card-tag">AI Roadmap</span>
+          <span class="ai-card-tag">Tool Selection</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="ai-section-note">
+      <strong>Not sure which service fits your situation?</strong> That's completely normal — most of these overlap with how you already work. Drop me a message describing what's taking up your time and I'll identify where AI can make the biggest difference for you specifically.
+    </div>
+  </div>
+</section>
+
+<div class="h-divider"></div>
+
 <!-- EXPERIENCE -->
 <section id="experience">
   <div class="section-inner">
@@ -996,7 +1196,7 @@
           <div class="exp-org">Growth & Development Asset Management</div>
         </div>
         <div>
-          <div class="exp-role">Investment & Credit Analyst</div>
+          <div class="exp-role">Investment & Credit Officer</div>
           <p class="exp-desc">Directed investment portfolios and market analysis. Performed credit risk assessments, account reconciliations, and evaluated financial data to maximize client returns across a range of asset classes.</p>
         </div>
       </div>
@@ -1029,7 +1229,7 @@
           <div class="exp-org">Lushville Hotel & Suites</div>
         </div>
         <div>
-          <div class="exp-role">Customer Representative Officer</div>
+          <div class="exp-role">Front Desk Officer</div>
           <p class="exp-desc">Managed digital booking systems, coordinated front-end operations for seamless service delivery, and maintained accurate digital logs and daily billing documentation under real-time operational pressure.</p>
         </div>
       </div>
@@ -1151,21 +1351,24 @@
         </div>
       </div>
 
-      <form class="contact-form" onsubmit="handleSubmit(event)">
+      <form class="contact-form" id="contact-form" onsubmit="handleSubmit(event)">
+        <input type="hidden" name="_subject" value="New enquiry from your website">
+        <input type="hidden" name="_next" value="">
         <div class="form-group">
           <label class="form-label">Your name</label>
-          <input class="form-input" type="text" placeholder="e.g. Amara Okafor" required>
+          <input class="form-input" type="text" name="name" placeholder="e.g. Amara Okafor" required>
         </div>
         <div class="form-group">
           <label class="form-label">Email address</label>
-          <input class="form-input" type="email" placeholder="you@company.com" required>
+          <input class="form-input" type="email" name="email" placeholder="you@company.com" required>
         </div>
         <div class="form-group">
           <label class="form-label">What do you need help with?</label>
-          <textarea class="form-textarea" placeholder="Describe what's on your plate — the more specific, the better." required></textarea>
+          <textarea class="form-textarea" name="message" placeholder="Describe what's on your plate — the more specific, the better." required></textarea>
         </div>
-        <button type="submit" class="btn-primary" style="align-self: flex-start; cursor: pointer; font-family: 'DM Sans', sans-serif;">Send message →</button>
-        <div id="form-confirm" style="display:none; font-size:0.82rem; color:#4caf7d; margin-top:0.5rem; letter-spacing:0.06em;">Message sent — I'll be in touch within 24 hours.</div>
+        <button type="submit" id="submit-btn" class="btn-primary" style="align-self: flex-start; cursor: pointer; font-family: 'DM Sans', sans-serif;">Send message →</button>
+        <div id="form-confirm" style="display:none; font-size:0.82rem; color:#4caf7d; margin-top:0.5rem; letter-spacing:0.06em;">✓ Message sent — I'll be in touch within 24 hours.</div>
+        <div id="form-error" style="display:none; font-size:0.82rem; color:#e07070; margin-top:0.5rem; letter-spacing:0.06em;">Something went wrong. Please email me directly at evlonge@gmail.com</div>
       </form>
     </div>
   </div>
@@ -1198,11 +1401,40 @@
       : 'rgba(122,148,176,0.15)';
   });
 
-  // Form
-  function handleSubmit(e) {
+  // Form — Formspree integration
+  async function handleSubmit(e) {
     e.preventDefault();
-    document.getElementById('form-confirm').style.display = 'block';
-    e.target.reset();
+    const form = e.target;
+    const btn = document.getElementById('submit-btn');
+    const confirm = document.getElementById('form-confirm');
+    const errMsg = document.getElementById('form-error');
+
+    btn.textContent = 'Sending…';
+    btn.disabled = true;
+    confirm.style.display = 'none';
+    errMsg.style.display = 'none';
+
+    try {
+      const data = new FormData(form);
+      // Replace YOUR_FORM_ID below with the ID from your Formspree dashboard
+      const res = await fetch('https://formspree.io/f/xjgzddvn', {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (res.ok) {
+        confirm.style.display = 'block';
+        form.reset();
+      } else {
+        errMsg.style.display = 'block';
+      }
+    } catch (err) {
+      errMsg.style.display = 'block';
+    }
+
+    btn.textContent = 'Send message →';
+    btn.disabled = false;
   }
 </script>
 </body>
